@@ -99,12 +99,15 @@ public class Signup extends AppCompatActivity {
 
     private Boolean validatePassword(){
         String val = password.getEditText().getText().toString();
-        String passwordVal = "^"+
-                             "(?=.*[a-zA-z])"+ /// any letters
-                             "(?=.*[@#$%^&+=])"+ ///at least one special character
-                            "(\\A\\w{4,20}\\z)"+ /// check no whitespace
-                            ".{4,}" + // atleast 4 characters
-                            "$";
+        String passwordVal =  "^" +
+                //"(?=.*[0-9])" +         //at least 1 digit
+                //"(?=.*[a-z])" +         //at least 1 lower case letter
+                //"(?=.*[A-Z])" +         //at least 1 upper case letter
+                "(?=.*[a-zA-Z])" +      //any letter
+                "(?=.*[@#$%^&+=])" +    //at least 1 special character
+                "(?=\\S+$)" +           //no white spaces
+                ".{4,}" +               //at least 4 characters
+                "$";
         if(val.isEmpty()){
             password.setError("Field cant be empty");
             return false;
