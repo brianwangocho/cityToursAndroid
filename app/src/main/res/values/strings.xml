@@ -15,4 +15,5 @@
     <string name="enter_email_address">enter email address</string>
     <string name="enter_phone_number">enter phone number</string>
     <string name="sign_up_button">sign up</string>
+    <string name="update">update</string>
 </resources>
