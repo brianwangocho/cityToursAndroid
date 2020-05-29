@@ -65,6 +65,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="#fece2f"
+                app:cardBackgroundColor="@color/colorPrimary"
                 app:cardElevation="10dp">
 
                 <RelativeLayout
@@ -112,6 +113,7 @@
                 android:layout_height="125dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
                 android:background="#fece2f"
                 app:cardElevation="10dp">
 
@@ -165,10 +167,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:padding="5dp"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/usernameEdit"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -182,6 +184,7 @@
                     android:inputType="text"
                     android:transitionName="username-transition" />
             </com.google.android.material.textfield.TextInputLayout>
+
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

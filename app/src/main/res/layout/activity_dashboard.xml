@@ -1,9 +1,342 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Dashboard">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    menu icons-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/menu_icon"
+            android:layout_centerVertical="true"
+            />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- search-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/get_away"
+                    android:id="@+id/dashboardTitle"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/montserrat"
+
+                    />
+
+                <!--       search bar-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@id/dashboardTitle"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:elevation="8dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/search"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/search_icon"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginEnd="15dp"
+                        />
+
+
+                </RelativeLayout>
+
+                <!--       search bar-->
+
+
+                <!--       categories section-->
+
+
+
+
+
+
+                <!--       categories section-->
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+            <!--    categories-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:weightSum="4"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:elevation="8dp"
+                        >
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/avatar"
+                            android:layout_centerInParent="true"
+                            ></ImageView>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="image one"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:elevation="8dp"
+                        >
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/avatar"
+                            android:layout_centerInParent="true"
+                            ></ImageView>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="image one"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:elevation="8dp"
+                        >
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/avatar"
+                            android:layout_centerInParent="true"
+                            ></ImageView>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="image one"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    >
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:elevation="8dp"
+                        >
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/avatar"
+                            android:layout_centerInParent="true"
+                            ></ImageView>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="image one"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--    featured-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                >
+                <LinearLayout
+                    android:id="@+id/featured_banner"
+                    android:layout_width="170dp"
+                    android:layout_height="280dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All Featured Locations"
+                        android:textSize="25dp"
+                        android:fontFamily="@font/montserrat"
+                        android:layout_margin="10dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="these are the most travelled locations our users have enjoyed and so could yoiu"
+                        />
+
+
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_toRightOf="@id/featured_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:id="@+id/feature_recycler"
+
+                    />
+
+
+
+            </RelativeLayout>
+
+            <!--this week trips-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="this week trips"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/montserrat"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="view all"
+                        android:textSize="15sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        />
+
+                </RelativeLayout>
+                <!--    recyclerview-->
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/weektrip_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

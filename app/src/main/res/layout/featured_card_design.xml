@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="160dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="10dp"
+    app:cardElevation="8dp"
+    android:layout_height="300dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+        <ImageView
+            android:id="@+id/feature_image"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/hiking"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:id="@+id/feature_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mt.Kenya"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            />
+            <RatingBar
+                android:id="@+id/feature_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="3.5"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                />
+        <TextView
+            android:id="@+id/feature_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lets concqure this mountain together it will be worth it"
+            tools:ignore="InvalidId" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

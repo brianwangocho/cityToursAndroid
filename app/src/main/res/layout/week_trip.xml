@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="8dp"
+    android:layout_margin="10dp"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:padding="10dp">
+    <ImageView
+        android:id="@+id/week_image"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/hike3"
+        android:scaleType="centerCrop"
+        />
+    <TextView
+        android:id="@+id/week_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hiker Kamau"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/week_image"
+        android:textSize="20sp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        />
+        <RatingBar
+            android:id="@+id/week_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_below="@id/week_name"
+            android:layout_toRightOf="@id/week_image"
+            android:layout_marginLeft="10dp"
+            android:rating="4"
+            />
+        <TextView
+            android:id="@+id/week_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Trip to Hell's gate on Saturday be there"
+            android:layout_below="@+id/week_rating"
+            android:layout_toRightOf="@id/week_image"
+            android:layout_marginLeft="10dp"
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

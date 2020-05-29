@@ -16,4 +16,7 @@
     <style name="ThemeOverlay.App.Button.TextButton" parent="Widget.MaterialComponents.Button">
         <item name="colorPrimary">#000</item>
     </style>
+    <style name="profile_card" parent="Widget.MaterialComponents.CardView">
+        <item name="android:background">@color/black</item>
+    </style>
 </resources>

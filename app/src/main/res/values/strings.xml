@@ -16,4 +16,27 @@
     <string name="enter_phone_number">enter phone number</string>
     <string name="sign_up_button">sign up</string>
     <string name="update">update</string>
+
+<!--    on Boarding string values-->
+
+    <string name="first_slide_title">Title 1</string>
+    <string name="second_slide_title">Title 2</string>
+    <string name="third_slide_title">Title 3</string>
+    <string name="fourth_slide_title">Title 4</string>
+
+    <!--    on Boarding string values-->
+
+    <string name="first_slide_desc">Are you bored and have no plans</string>
+    <string name="second_slide_desc">Are you good at event planning,make cash out of it</string>
+    <string name="third_slide_desc">Are you good at event planning,make cash out of it</string>
+    <string name="fourth_slide_desc">Team building</string>
+
+    <!--    on Boarding button values-->
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Skip</string>
+    <string name="lets_get_started">Let get started</string>
+    <string name="get_away">Get Away</string>
+    <string name="search">search</string>
+
+
 </resources>
