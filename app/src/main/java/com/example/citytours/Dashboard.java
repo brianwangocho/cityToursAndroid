@@ -1,23 +1,36 @@
 package com.example.citytours;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.citytours.HomeAdapter.FeaturedAdapter;
 import com.example.citytours.HomeAdapter.FeaturedTrips;
 import com.example.citytours.HomeAdapter.WeekTrips;
 import com.example.citytours.HomeAdapter.WeekTripsAdapter;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
-public class Dashboard extends AppCompatActivity {
+public class Dashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     RecyclerView featurerecyclerView,weekTripRecyclerView;
     RecyclerView.Adapter adapter,weekTripAdapter;
+    ImageView menuIcon;
+
+    ///drawerMenu
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +42,55 @@ public class Dashboard extends AppCompatActivity {
         featurerecyclerView = findViewById(R.id.feature_recycler);
         weekTripRecyclerView = findViewById(R.id.weektrip_recycler);
 
-        ///create a method for the recycler
+        ///menu variables
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.navigation_view);
+        menuIcon = findViewById(R.id.menu_icon);
 
+        ///create a method for the recycler
         featuredRecycler();
         weekTripRecycler();
+        ////drawer animations
+        navigationDrawer();
+
+    }
+
+    private void navigationDrawer() {
+        navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_home);
+
+        menuIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(drawerLayout.isDrawerVisible(GravityCompat.START)){
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
+
+        animateNavigationDrawer();
+    }
+
+    private void animateNavigationDrawer() {
+        drawerLayout.setScrimColor(getResources().getColor(R.color.colorPrimary));
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        /// make sure drawer is closed when closing the app
+
+        if(drawerLayout.isDrawerVisible(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }else
+
+        super.onBackPressed();
     }
 
     private void weekTripRecycler() {
@@ -70,4 +128,6 @@ public class Dashboard extends AppCompatActivity {
         adapter = new FeaturedAdapter(featuredTrips);
         featurerecyclerView.setAdapter(adapter);
     }
+
+
 }

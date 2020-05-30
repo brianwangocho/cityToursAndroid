@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
@@ -20,5 +20,10 @@
 
     <style name="profile_card" parent="Widget.MaterialComponents.CardView">
         <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="navigationTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorControlHighlight" tools:ignore="NewApi">@color/black</item>
     </style>
 </resources>

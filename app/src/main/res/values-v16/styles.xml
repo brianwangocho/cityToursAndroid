@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         Customize your theme here.
@@ -18,5 +18,9 @@
     </style>
     <style name="profile_card" parent="Widget.MaterialComponents.CardView">
         <item name="android:background">@color/black</item>
+    </style>
+    <style name="navigationTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorControlHighlight" tools:targetApi="lollipop" tools:ignore="NewApi">@color/black</item>
     </style>
 </resources>
