@@ -7,6 +7,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -60,6 +61,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_home);
 
+
         menuIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,8 +79,43 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         drawerLayout.setScrimColor(getResources().getColor(R.color.colorPrimary));
     }
 
+    ///// handle clicks of item of the navigation drawer
+    //TODO :(1)ADD ACTIVITY TO LINK TO IN EACH DRAWER ITEM
+    //TODO:(2) HANDLE HOW TO CLOSE DRAWER WHEN YOU RESUME AN ACTIVITY
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+
+
+        if(id == R.id.logout){
+            Intent i = new Intent(Dashboard.this,Login.class);
+            startActivity(i);
+
+
+        }else if(id==R.id.profile){
+            Intent i = new Intent(Dashboard.this,UserProfile.class);
+            startActivity(i);
+        }else if(id == R.id.nav_home){
+
+
+        }else if(id == R.id.history){
+
+        }else if (id == R.id.settings){
+
+        }
+        else if(id == R.id.camping){
+
+        }else if (id == R.id.hiking){
+
+        }
+        else if(id == R.id.forest_walks){
+
+        }
+
+
+
         return true;
     }
 
