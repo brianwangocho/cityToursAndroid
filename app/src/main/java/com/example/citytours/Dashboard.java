@@ -83,6 +83,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     //TODO :(1)ADD ACTIVITY TO LINK TO IN EACH DRAWER ITEM
     //TODO:(2) HANDLE HOW TO CLOSE DRAWER WHEN YOU RESUME AN ACTIVITY
 
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -92,6 +93,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         if(id == R.id.logout){
             Intent i = new Intent(Dashboard.this,Login.class);
             startActivity(i);
+            finish();
 
 
         }else if(id==R.id.profile){
