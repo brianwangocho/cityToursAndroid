@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         android:layout_gravity="start"
-        android:theme="@style/navigationTheme"
+        style="@style/navigationTheme"
         app:headerLayout="@layout/menu_header"
         app:menu="@menu/main_menu"
         />
